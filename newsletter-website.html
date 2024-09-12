@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Newsletter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #35424a;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        main {
+            padding: 2rem;
+            max-width: 800px;
+            margin: auto;
+        }
+        .newsletter-form {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        input[type="email"] {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        button {
+            background-color: #35424a;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2c3840;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Newsletter</h1>
+    </header>
+    <main>
+        <section class="newsletter-form">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Stay updated with our latest news and articles!</p>
+            <form id="subscribeForm">
+                <input type="email" id="emailInput" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+        <section>
+            <h2>Latest Articles</h2>
+            <article>
+                <h3>Article 1</h3>
+                <p>This is a sample article. Replace this with your own content.</p>
+            </article>
+            <article>
+                <h3>Article 2</h3>
+                <p>This is another sample article. Replace this with your own content.</p>
+            </article>
+        </section>
+    </main>
+    <script>
+        document.getElementById('subscribeForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('emailInput').value;
+            alert(`Thank you for subscribing with email: ${email}`);
+            // Here you would typically send this data to a server
+            // For GitHub Pages, you might use a service like Formspree
+            document.getElementById('emailInput').value = '';
+        });
+    </script>
+</body>
+</html>
